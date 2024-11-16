@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+body, #root{
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: #1E255E;
+}
+
+.body-preloader {
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light gray background for track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Gray color for thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker gray on hover */
+}

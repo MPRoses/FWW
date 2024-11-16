@@ -1,0 +1,127 @@
+:root {
+  --fw: 600;
+  --fs: 150;
+  --fontSize: 15
+  --baseColor: "red";
+}
+
+.container-contact {
+  position: absolute;
+  overflow: hidden;
+  width: calc(98vw - 80px);
+  height: 350px;
+  top: calc(1850px - 1vw - 40px);
+  left: calc(1vw + 40px);
+}
+.contact-container {
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color:#1E255E;
+  top: 0;
+  position: absolute;
+  border-radius: 60px;
+  transition: transform 1s cubic-bezier(.13,.61,.2,.89);
+  transform: scale(.96) !important;
+}
+.contact-container:hover {
+  transform: scale(1) !important;
+}
+.contact-container img {
+  width: 100%;
+  filter: blur(15px);
+  pointer-events: none;
+  transition: filter 1s cubic-bezier(.13,.61,.2,.89);
+}
+.contact-container p {
+  color: white;
+  position: absolute;
+  top: 180px;
+  left: 50px;
+  max-width: 60vw;
+}
+.txt {
+  font-size: 8rem; /* Correctly set the font-size */
+  color: white;
+  position: absolute; /* Changed to relative to keep positioning normal */
+  display: flex; /* Use flexbox to align items in a row */
+  top: 50px;
+  font-family: "GT-Flexa", sans-serif;
+	font-weight: var(--fw);
+  font-stretch: calc(var(--fs) * 1%);
+  left: 50px;
+  line-height: 1; /* Ensure the line height is normal */
+  letter-spacing: 0; /* Remove letter spacing */
+  text-transform: uppercase; /* Ensure text is uppercase */
+  user-select: none;
+}
+
+.char {
+  font-size: inherit; /* Inherit font-size from parent */
+  display: inline-block; /* Ensure each character is inline-block */
+  transform: translate(0px, 0px); /* Remove transform properties if unnecessary */
+}
+.icon {
+  width: 30px;
+  position: absolute;
+  top: 280px;
+  left: 50px;
+}
+.contact-container p:nth-child(5) {
+  position: absolute;
+  top: 280px;
+  left: 90px;
+}
+
+.container-contact {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, transform 1s cubic-bezier(.13,.61,.2,.89);
+  transform: translateY(-50px);
+}
+
+
+@media screen and (max-width: 1100px) {
+
+  .container, body, #root {
+    height: 2560px;
+  }
+  .txt {
+    font-size: 2rem;
+  }
+  .contact-container p {
+    font-size: 1rem;
+    top: 85px;
+
+  }
+  .contact-container p:nth-child(5) {
+    position: absolute;
+    top: 280px;
+    left: 85px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-contact {
+    height: 350px;
+    top :calc(2210px - 20px);
+    width: calc(98vw - 40px);
+    left: calc(20px + 1vw);
+  }
+  .contact-container p:nth-child(5) {
+    position: absolute;
+    top: 283px;
+    left: 85px;
+  }
+  .credits {
+    position: absolute;
+    top: 2540px;
+    font-size: .6rem;
+  }
+  
+  .contact-container p {
+    font-size: .8rem;
+    top: 85px;
+
+  }
+
+}

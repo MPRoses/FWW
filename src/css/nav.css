@@ -1,0 +1,116 @@
+
+.nav-container {
+  position: fixed; /*SCROLL*/
+  background-color: #F7F7F9;
+  width: 100vw;
+  height: 150px;
+  transition: background-color .78s cubic-bezier(.13,.61,.2,.89), height .78s cubic-bezier(.13,.61,.2,.89);
+  z-index: 100;
+}
+.nav-container.active {
+  background-color: #F7F7F9;
+  width: 100vw;
+  height: 100px;
+}
+.nav-logo {
+  width: 243px;
+  height: 40px;
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 250px;
+  pointer-events: all;
+}
+.nav-logo img {
+  height: 40px;
+  position: absolute;
+  top: 0;
+}
+.nav-logo:hover {
+  cursor: pointer; /*HOVERABLE*/
+}
+.nav-logo p {
+  font-size: 1.75rem;
+  left: 50px;
+  position: absolute;
+}
+.nav-main {
+  display: flex;
+  font-size: 1em;
+  width: fit-content;
+  position: absolute;
+  right: calc(75px - 42.16px * .5 + 250px);
+  top: calc(50% - 0.5 * 24px);
+  z-index: 1;
+}
+.nav-main .main-item {
+  overflow: hidden;
+  height: 24px
+}
+.nav-main p {
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.main-item:nth-child(3) p:nth-child(2) {
+  display: none;
+}
+.nav-main .main-item:nth-child(2){
+  margin-left: 100px;
+}
+.nav-main .main-item:nth-child(3){
+  margin-left: 154px;
+  z-index: 1;
+  pointer-events: none;
+  position: relative;
+}
+.main-item:nth-child(3) {
+  overflow: visible;
+}
+.nav-btn {
+  position: absolute;
+  height: 45px;
+  width: 130px;
+  top: -10px;
+  background-color: #E4E6F8;
+  border-radius: 20px;
+  right: calc(-65px +  42.16px * .5);
+  pointer-events: all;
+  transition: transform 1s cubic-bezier(.13,.61,.2,.89);
+  transform: scale(1);
+}
+.nav-btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+@media screen and (max-width: 1300px) {
+  .nav-main {
+    right: calc(75px - 42.16px * .5 + 150px);
+  }
+  .nav-logo {
+    left: 150px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .nav-main p {
+    display: none;
+  }
+  .main-item:nth-child(3) p:nth-child(2) {
+    display: block;
+  }
+  .nav-btn {
+    width: 120px;
+    right: calc(-60px + 44.19px * .5);
+  }
+}
+@media screen and (max-width: 800px) {
+  .nav-main {
+    right: calc(37px - 42.16px * .5 + 20px);
+  }
+  .nav-logo {
+    left: 20px;
+  }
+  .nav-btn {
+    width: 70px;
+    right: calc(-35px + 44.19px * .5);
+  }
+}
